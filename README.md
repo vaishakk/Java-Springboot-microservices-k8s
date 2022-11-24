@@ -1,4 +1,5 @@
 # Java-Springboot-microservices-k8s
+The goal is to demonstrate running Java Springboot microservices in Kubernetes.
 There are two services service 1 and service 2. The gateway service communicates with the two services via grpc endpoints over 9090 port and expose them externally on port 8080.
 The gateway exposes two rest endpoints
 1. /service1
