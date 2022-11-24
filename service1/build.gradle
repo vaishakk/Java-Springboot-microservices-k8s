@@ -1,0 +1,62 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.9'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'com.google.protobuf' version("0.8.12")
+    id 'idea'
+}
+
+
+group = 'com.assessement.service1'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-test:2.7.3'
+    implementation 'com.google.protobuf:protobuf-java:3.19.4'
+    implementation 'io.grpc:protoc-gen-grpc-java:1.44.0'
+    implementation 'io.grpc:grpc-stub:1.44.0'
+    implementation 'io.grpc:grpc-protobuf:1.44.0'
+    implementation 'io.grpc:grpc-core:1.44.0'
+    implementation 'net.devh:grpc-server-spring-boot-starter:2.13.0.RELEASE'
+
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.13.1'
+    implementation 'io.grpc:grpc-testing:1.44.0'
+
+    implementation 'net.devh:grpc-client-spring-boot-starter:2.13.0.RELEASE'
+    implementation 'com.salesforce.servicelibs:reactor-grpc-stub:1.2.3'
+    implementation 'io.projectreactor:reactor-core:3.4.23'
+    implementation 'log4j:log4j:1.2.17'
+}
+
+
+
+protobuf {
+    generatedFilesBaseDir = "$projectDir/src/generated/"
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.12.0"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.36.0'
+        }
+        reactor {
+            artifact = "com.salesforce.servicelibs:reactor-grpc:1.2.3"
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+            reactor {}
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

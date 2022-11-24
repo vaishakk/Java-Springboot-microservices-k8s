@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/service2/src/generated/generated.iml" filepath="$PROJECT_DIR$/service2/src/generated/generated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service1/src/generated/generated1.iml" filepath="$PROJECT_DIR$/service1/src/generated/generated1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwservice/src/generated/generated2.iml" filepath="$PROJECT_DIR$/gwservice/src/generated/generated2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwservice/src/main/main.iml" filepath="$PROJECT_DIR$/gwservice/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service2/src/main/main1.iml" filepath="$PROJECT_DIR$/service2/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service1/src/main/main2.iml" filepath="$PROJECT_DIR$/service1/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service2/src/test/test.iml" filepath="$PROJECT_DIR$/service2/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service1/src/test/test1.iml" filepath="$PROJECT_DIR$/service1/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gwservice/src/test/test2.iml" filepath="$PROJECT_DIR$/gwservice/src/test/test2.iml" />
+    </modules>
+  </component>
+</project>

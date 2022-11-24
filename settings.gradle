@@ -1,0 +1,5 @@
+rootProject.name = 'Volvo-java-assessement'
+include 'service1'
+include 'gwservice'
+include 'service2'
+

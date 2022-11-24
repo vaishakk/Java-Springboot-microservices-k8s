@@ -1,0 +1,15 @@
+syntax = 'proto3';
+
+package com.assessement.service1;
+
+service Service1{
+    rpc GetService1 (NoParams) returns (Service1Reply){}
+}
+
+message NoParams {
+
+}
+
+message Service1Reply {
+  string reply = 1;
+}

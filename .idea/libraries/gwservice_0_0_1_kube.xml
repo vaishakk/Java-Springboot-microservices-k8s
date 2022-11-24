@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gwservice-0.0.1-kube">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/gwservice/build/libs/gwservice-0.0.1-kube.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

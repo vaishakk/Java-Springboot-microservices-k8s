@@ -1,0 +1,55 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.9'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'com.google.protobuf' version("0.8.12")
+    id 'idea'
+}
+
+
+group = 'com.assessement.gw'
+version = '0.0.1-kube'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-test:2.7.3'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.13.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.6.3'
+    implementation 'net.devh:grpc-client-spring-boot-starter:2.13.0.RELEASE'
+    implementation 'com.salesforce.servicelibs:reactor-grpc-stub:1.2.3'
+    implementation 'io.projectreactor:reactor-core:3.4.23'
+    implementation 'junit:junit:4.13.1'
+    implementation 'io.grpc:grpc-testing:1.49.1'
+    implementation 'com.github.docker-java:docker-java:3.2.13'
+
+}
+
+protobuf {
+    generatedFilesBaseDir = "$projectDir/src/generated/"
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.12.0"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.36.0'
+        }
+        reactor {
+            artifact = "com.salesforce.servicelibs:reactor-grpc:1.2.3"
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+            reactor {}
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

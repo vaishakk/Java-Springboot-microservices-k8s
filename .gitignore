@@ -1,0 +1,12 @@
+# Project exclude paths
+/.gradle/
+/build/
+/gwservice/build/
+/gwservice/build/classes/java/main/
+/gwservice/build/classes/java/test/
+/service1/build/
+/service1/build/classes/java/main/
+/service1/build/classes/java/test/
+/service2/build/
+/service2/build/classes/java/main/
+/service2/build/classes/java/test/

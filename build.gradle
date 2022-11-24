@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.assessement'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.github.docker-java:docker-java:3.2.13'
+    implementation 'org.springframework.boot:spring-boot-starter-test:2.7.4'
+    //testImplementation 'org.junit.jupiter:junit-jupiter-api:4.13.1'
+    //testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:4.13.1'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
