@@ -1,4 +1,4 @@
-rootProject.name = 'Volvo-java-assessement'
+rootProject.name = 'Java-Springboot-microservices-k8ss'
 include 'service1'
 include 'gwservice'
 include 'service2'
