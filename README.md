@@ -18,4 +18,4 @@ The gateway exposes two rest endpoints
 `kubectl apply -f deployment.yaml`
 5. Test
 Run `kubectl get all` to see the host machine port for gwservice. \
-`localhost:<host port>/service1` should show "Hello from service 1 in a browser.
+`localhost:<host port>/service1` should show "Hello from service 1" in a browser.
